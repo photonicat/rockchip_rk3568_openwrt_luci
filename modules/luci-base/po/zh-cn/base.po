@@ -257,8 +257,14 @@ msgstr "额外的 HOSTS 文件"
 msgid "Disable IPv6 DNS forwards"
 msgstr "禁止解析 IPv6 DNS 记录"
 
+msgid "Disable IPv4 DNS forwards"
+msgstr "禁止解析 IPv4 DNS 记录"
+
 msgid "Filter IPv6(AAAA) DNS Query Name Resolve"
 msgstr "过滤掉 IPv6(AAAA) ，只返回 IPv4 DNS 域名记录"
+
+msgid "Filter IPv4(A) DNS Query Name Resolve"
+msgstr "过滤掉 IPv4(A) ，只返回 IPv6 DNS 域名记录"
 
 msgid "Minimum TTL to send to clients"
 msgstr "客户端缓存的最小 DNS TTL"
@@ -1072,6 +1078,10 @@ msgstr "启用流入数据包镜像"
 
 msgid "Enable mirroring of outgoing packets"
 msgstr "启用流出数据包镜像"
+
+msgid ""
+"Enable packet steering across all CPUs. May help or hinder network speed."
+msgstr "启用数据包多核负载均衡。 可能会增强网络转发性能。"
 
 msgid "Enable the DF (Don't Fragment) flag of the encapsulating packets."
 msgstr "启用后报文的 DF（禁止分片）标志。"
@@ -2392,6 +2402,9 @@ msgstr "软件包列表已超过 24 小时未更新"
 
 msgid "Package name"
 msgstr "软件包名称"
+
+msgid "Packet Steering"
+msgstr "数据包负载均衡"
 
 msgid "Packets"
 msgstr "数据包"
@@ -4098,3 +4111,15 @@ msgstr "已标记"
 
 msgid "untagged"
 msgstr "未标记"
+
+msgid "Logo"
+msgstr "图标"
+
+msgid "Compatible Mode"
+msgstr "兼容模式"
+
+msgid "High Performing Mode"
+msgstr "高性能模式"
+
+msgid "Target Platform"
+msgstr "目标平台"
