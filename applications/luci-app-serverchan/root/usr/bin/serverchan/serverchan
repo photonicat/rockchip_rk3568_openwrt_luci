@@ -931,7 +931,7 @@ function cpu_load(){
 
 function cputop(){
 	[ -z "$1" ] && content="${content}${str_splitline}${str_title_start} 当前 CPU 占用前三的进程${str_title_end}"
-	local gettop=`top -bn 1|grep -v "top -bn 1"`
+	local gettop=`busybox top -bn 1|grep -v "top -bn 1"`
 	for i in `seq 5 7`; do
 		local top_name=`echo "${gettop}"|awk 'NR=='${i}|awk '{print ($8 ~ /\/bin\/sh|\/bin\/bash/) ? $9 : $8}'`
 		local top_load=`echo "${gettop}"|awk 'NR=='${i}|awk '{print $7}'`
