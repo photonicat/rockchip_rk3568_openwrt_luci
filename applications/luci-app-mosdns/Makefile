@@ -1,8 +1,8 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=luci-app-mosdns
-PKG_VERSION:=1.5.7
-PKG_RELEASE:=1
+PKG_VERSION:=1.5.23
+PKG_RELEASE:=3
 
 LUCI_TITLE:=LuCI Support for mosdns
 LUCI_PKGARCH:=all
@@ -15,14 +15,6 @@ define Package/$(PKG_NAME)/conffiles
 /etc/mosdns/rule
 endef
 
-define Package/$(PKG_NAME)/postinst
-#!/bin/sh
-[ -n "${IPKG_INSTROOT}" ] || {
-	sysctl -p /etc/sysctl.d/20-mosdns-buffer-increase.conf
-	exit 0
-}
-endef
-
-include ../../luci.mk
+include $(TOPDIR)/feeds/luci/luci.mk
 
 # call BuildPackage - OpenWrt buildroot signature
